@@ -77,7 +77,7 @@
       text-align: center;
       color: #fff;
     }
-
+    
   </style>
 </head>
 <body>
@@ -135,7 +135,34 @@
     <p>&copy; 2023 B&D Bakery Webpage. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    const title = document.querySelector('h1');
+    let colorIndex = 0;
+    const colors = ['#000080', '#0000FF', '#1E90FF', '#6495ED', '#ADD8E6', '#B0C4DE', '#87CEFA'];
   
+    function changeColor() {
+      title.style.color = colors[colorIndex];
+      colorIndex++;
+      if (colorIndex == colors.length) {
+        colorIndex = 0;
+      }
+    }
+  
+    setInterval(changeColor, 500);
+  
+    title.style.opacity = 0;
+    let opacity = 0;
+  
+    function fadeIn() {
+      opacity += 0.01;
+      title.style.opacity = opacity;
+      if (opacity >= 1) {
+        clearInterval(interval);
+      }
+    }
+  
+    const interval = setInterval(fadeIn, 10);
+  </script>
   
   
   
