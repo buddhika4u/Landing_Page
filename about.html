@@ -1,88 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>My Webpage</title>
-  <style>
-    /* Your CSS code goes here */
-    header {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     background-color: #e6f0ff; /* light blue */
-     padding: 10px;
-     animation: fadeInDown 1s ease-out;
-    }
-
-    @keyframes fadeInDown {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-  
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-    }
-  
-    nav li a {
-      text-decoration: none;
-      color: #0077b6; /* dark blue */
-    }
-    
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .row {
-         display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    .image-container {
-        position: relative;
-        width: 30%;
-        margin-right: 10px;
-    }
-
-    .image-container p {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        padding: 5px;
-        margin: 0;
-        font-size: 14px;
-        text-align: center;
-    }
-
-    footer {
-      background-color: #1a2b48; /* navy blue */
-      padding: 10px;
-      text-align: center;
-      color: #fff;
-    }
-    
-  </style>
-</head>
+    <head>
+        <title>B&D Bakery Webpage</title>
+        <link rel="stylesheet" href="style.css">
+      </head>
 <body>
   <header>
-    <h1>About B&D Bakery</h1>
+    <h1>About - B&D Bakery</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -96,7 +20,7 @@
   
   <main>
     <p>
-        Welcome to B&D Bakery! We are a family-owned bakery that has been serving our community for over 30 years. We are passionate about baking delicious and fresh pastries, cakes, and sandwiches that are perfect for any occasion. Our team of expert bakers uses only the highest quality ingredients to ensure that every bite is full of flavor.<br><br>
+        Welcome to B&D Bakery! We are a family-owned bakery that has been serving our community for over 25 years. We are passionate about baking delicious and fresh pastries, cakes, and sandwiches that are perfect for any occasion. Our team of expert bakers uses only the highest quality ingredients to ensure that every bite is full of flavor.<br><br>
         At B&D Bakery, we believe that there is nothing better than a warm, freshly baked pastry or a delicious sandwich. That's why we put so much care and attention into every single item we make. From our classic croissants to our seasonal specialties, we have something for everyone. We also offer a wide variety of cakes for all occasions, including birthdays, weddings, and other special events.<br><br>
         Our bakery is more than just a place to buy baked goods. It's a warm and welcoming community where you can relax and enjoy a cup of coffee or tea while you savor one of our delicious treats. We pride ourselves on our friendly and attentive customer service, and we are always happy to help you find the perfect pastry or sandwich to suit your taste.<br><br><br>
         So whether you're looking for a quick breakfast on the go or a special treat for your next event, come visit us at B&D Bakery. We're sure you'll love our freshly baked goods as much as we do!
@@ -107,34 +31,7 @@
     <p>&copy; 2023 B&D Bakery Webpage. All Rights Reserved.</p>
   </footer>
 
-  <script>
-    const title = document.querySelector('h1');
-    let colorIndex = 0;
-    const colors = ['#000080', '#0000FF', '#1E90FF', '#6495ED', '#ADD8E6', '#B0C4DE', '#87CEFA'];
-  
-    function changeColor() {
-      title.style.color = colors[colorIndex];
-      colorIndex++;
-      if (colorIndex == colors.length) {
-        colorIndex = 0;
-      }
-    }
-  
-    setInterval(changeColor, 500);
-  
-    title.style.opacity = 0;
-    let opacity = 0;
-  
-    function fadeIn() {
-      opacity += 0.01;
-      title.style.opacity = opacity;
-      if (opacity >= 1) {
-        clearInterval(interval);
-      }
-    }
-  
-    const interval = setInterval(fadeIn, 10);
-  </script>
+  <script src="script.js"></script>
   
 </body>
 </html>

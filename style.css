@@ -2,8 +2,23 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e6f0ff; /* light blue */
+    background-color: #6d4c41; /* greyish brown */
     padding: 10px;
+  }
+  
+  .header-animation {
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   nav ul {
@@ -14,13 +29,75 @@ header {
   
   nav li a {
     text-decoration: none;
-    color: #0077b6; /* dark blue */
+    color: #ecb486b7; /* greyish brown */
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 30%;
+    margin-right: 10px;
+  }
+  
+  .image-container p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(109, 76, 65, 0.7); /* greyish brown with opacity */
+    color: #fff;
+    padding: 5px;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
   }
   
   footer {
-    background-color: #1a2b48; /* navy blue */
+    background-color: #8b5a2b; /* brown */
     padding: 10px;
     text-align: center;
     color: #fff;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #d7ccc8; /* light grey */
+  }
+  
+  .image-cell {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+  
+  .image-cell img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
   
